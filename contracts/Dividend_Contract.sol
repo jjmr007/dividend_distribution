@@ -32,7 +32,7 @@ contract Dividend {
     
     uint256 public Total_A;
     uint256 internal Total_B;
-    uint256 internal Total_tB;
+    uint256 public Total_tB;
     uint256 internal sTart;
     mapping (address => ToBurn) internal _uSerDividends;
     
@@ -126,7 +126,6 @@ contract Dividend {
         FlaG = true;
         address _Alpha = msg.sender;
         uint256 _N = block.number.sub(sTart).mul(Total_B);
-        
         uint256 Delta;
         if (_uSerDividends[_Alpha].userBlock == 0) {
             Delta = block.number.sub(sTart);
@@ -135,9 +134,17 @@ contract Dividend {
         }
         _uSerDividends[_Alpha].userBlock = block.number;
         _uSerDividends[_Alpha].dividend_Burnable += Delta.mul(_uSerDividends[_Alpha].lastBalance);
-        uint256 paYment = Total_A.mul(_uSerDividends[_Alpha].dividend_Burnable).div(_N.sub(Total_tB));
-        Total_A -= paYment;
+        uint256 paYment; 
+        require(_N.sub(Total_tB)>=0);
+        if (_N.sub(Total_tB)>0) {
+        paYment = Total_A.mul(_uSerDividends[_Alpha].dividend_Burnable).div(_N.sub(Total_tB));  
         Total_tB += _uSerDividends[_Alpha].dividend_Burnable;
+        }
+        else {
+            paYment = 0;
+            sTart = block.number;
+        }
+        Total_A -= paYment;
         _uSerDividends[_Alpha].dividend_Burnable = 0;
         _TokenA.transfer(_Alpha, paYment);
         FlaG = false;
@@ -147,9 +154,15 @@ contract Dividend {
     function ConsultDividend(address _Alpha) public view returns (uint256) {
         
         uint256 _N = block.number.sub(sTart).mul(Total_B);
-        uint256 paYment = Total_A.mul(_uSerDividends[_Alpha].dividend_Burnable).div(_N.sub(Total_tB));
+        uint256 paYment; 
+        if (_N.sub(Total_tB)>0) {
+        paYment = Total_A.mul(_uSerDividends[_Alpha].dividend_Burnable).div(_N.sub(Total_tB));  
+        }
+        else {
+            paYment = 0;
+        }
         return paYment;
         
     }
-    
+
 }
