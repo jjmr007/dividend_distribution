@@ -1,5 +1,5 @@
 {\rtf1\ansi\ansicpg1252\deff0\deflang8202{\fonttbl{\f0\fmodern\fprq1 Lucida Console;}{\f1\fnil\fcharset0 Consolas;}{\f2\fnil\fcharset0 Calibri;}}
-{\colortbl ;\red0\green191\blue0;\red191\green0\blue191;\red191\green191\blue0;\red0\green191\blue191;\red0\green0\blue255;\red0\green77\blue187;}
+{\colortbl ;\red0\green191\blue0;\red191\green0\blue191;\red191\green191\blue0;\red0\green191\blue191;\red0\green0\blue255;\red0\green77\blue187;\red191\green0\blue0;}
 {\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang10\f0\fs18\par
 \par
 \cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\par
@@ -261,6 +261,107 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.\par
 \cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
 \cf0 $\par
 \f2\fs22 ----------------------------------------\par
+\f0\fs18\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git status\par
+On branch master\par
+Your branch is up to date with 'origin/master'.\par
+\par
+Changes not staged for commit:\par
+  (use "git add/rm <file>..." to update what will be committed)\par
+  (use "git restore <file>..." to discard changes in working directory)\par
+        \cf7 deleted:    Documento.rtf\par
+\par
+\cf0 Untracked files:\par
+  (use "git add <file>..." to include in what will be committed)\par
+        \cf7 Bitacora.rtf\par
+\par
+\cf0 no changes added to commit (use "git add" and/or "git commit -a")\par
+\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git add .\par
+\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git commit -m "updated bitacora"\par
+[master 99c8623] updated bitacora\par
+ 1 file changed, 56 insertions(+), 1 deletion(-)\par
+ rename Documento.rtf => Bitacora.rtf (80%)\par
+\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git pus origin master\par
+git: 'pus' is not a git command. See 'git --help'.\par
+\par
+The most similar commands are\par
+        push\par
+        pull\par
+\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git push origin master\par
+Enumerating objects: 4, done.\par
+Counting objects: 100% (4/4), done.\par
+Delta compression using up to 4 threads\par
+Compressing objects: 100% (3/3), done.\par
+Writing objects: 100% (3/3), 2.81 KiB | 2.81 MiB/s, done.\par
+Total 3 (delta 0), reused 0 (delta 0)\par
+To {\field{\*\fldinst{HYPERLINK "https://github.com/jjmr007/dividend_distribution.git"}}{\fldrslt{\ul\cf5 https://github.com/jjmr007/dividend_distribution.git}}}\f0\fs18\par
+   5d2c93f..99c8623  master -> master\par
+\par
+\f1\fs24 ----------------------------------------------------\par
+\f0\fs18\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git status\par
+On branch master\par
+Your branch is up to date with 'origin/master'.\par
+\par
+Untracked files:\par
+  (use "git add <file>..." to include in what will be committed)\par
+        \cf7 contracts/\par
+\par
+\cf0 nothing added to commit but untracked files present (use "git add" to track)\par
+\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git commit -m "added contract"\par
+On branch master\par
+Your branch is up to date with 'origin/master'.\par
+\par
+Untracked files:\par
+  (use "git add <file>..." to include in what will be committed)\par
+        \cf7 contracts/\par
+\par
+\cf0 nothing added to commit but untracked files present (use "git add" to track)\par
+\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git add .\par
+\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git status\par
+On branch master\par
+Your branch is up to date with 'origin/master'.\par
+\par
+Changes to be committed:\par
+  (use "git restore --staged <file>..." to unstage)\par
+        \cf1 new file:   contracts/Dividend_Contract.sol\par
+\par
+\par
+MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git commit -m "added contract"\par
+[master a6353e5] added contract\par
+ 1 file changed, 155 insertions(+)\par
+ create mode 100644 contracts/Dividend_Contract.sol\par
+\par
+\cf1 MultiEBD@MultiEBD-PC \cf2 MINGW64 \cf3 ~/Desktop/CODER/E0_TOKEN_DIVIDEND_CONTRACT\cf4  (master)\par
+\cf0 $ git push -u origin master\par
+Enumerating objects: 5, done.\par
+Counting objects: 100% (5/5), done.\par
+Delta compression using up to 4 threads\par
+Compressing objects: 100% (3/3), done.\par
+Writing objects: 100% (4/4), 1.44 KiB | 1.44 MiB/s, done.\par
+Total 4 (delta 0), reused 0 (delta 0)\par
+To {\field{\*\fldinst{HYPERLINK "https://github.com/jjmr007/dividend_distribution.git"}}{\fldrslt{\ul\cf5 https://github.com/jjmr007/dividend_distribution.git}}}\f0\fs18\par
+   99c8623..a6353e5  master -> master\par
+Branch 'master' set up to track remote branch 'master' from 'origin'.\par
+\par
 \f1\fs24\par
+\par
 }
  
